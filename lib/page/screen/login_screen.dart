@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'dart:developer';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_frontend/page/screen/home_screen.dart';
 import 'package:flutter_frontend/page/screen/signup_screen.dart';
