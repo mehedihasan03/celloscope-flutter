@@ -2,6 +2,13 @@
 
 A new Flutter project.
 
+# Back-end
+## Spring boot
+	https://github.com/mehedihasan03/celloscope-springboot.git
+
+# Project presentation
+https://docs.google.com/presentation/d/11KXy5qSteKliRbfqqf9D-MM-YXRHUM14CEBLlC63QeY/edit?usp=sharing
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
