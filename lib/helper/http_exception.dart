@@ -10,8 +10,7 @@ class HttpException implements Exception {
 }
 
 class FetchDataException extends HttpException {
-  FetchDataException(String message)
-      : super(message);
+  FetchDataException(String message) : super(message);
 }
 
 class BadRequestException extends HttpException {

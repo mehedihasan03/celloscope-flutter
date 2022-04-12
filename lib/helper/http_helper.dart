@@ -12,7 +12,8 @@ class HttpHelper {
       //ToDo: add token
       var headers = {
         "Content-Type": "application/json",
-        'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMiIsImlhdCI6MTY0NDIxMzUzMCwiZXhwIjoxNjQ1MDc3NTMwfQ.pj0QAiR7ahF63HFjiXSGupHK7C3xePCXCkuXoTHwdJv4Vuk7NC_BDHADim2udBDvOe1Rz6dTKiUa31y0NH77PA#'
+        'Authorization':
+            'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMiIsImlhdCI6MTY0NDIxMzUzMCwiZXhwIjoxNjQ1MDc3NTMwfQ.pj0QAiR7ahF63HFjiXSGupHK7C3xePCXCkuXoTHwdJv4Vuk7NC_BDHADim2udBDvOe1Rz6dTKiUa31y0NH77PA#'
       };
       var uri = Uri.parse(url);
       final response = await get(uri, headers: headers);
@@ -57,10 +58,9 @@ class HttpHelper {
         Map<dynamic, dynamic> responseJson = json.decode(response.body);
         var data = responseJson['message'];
         log("error: " + data.toString());
-        throw FetchDataException(
-            'Username or Password does not match');
+        throw FetchDataException('Username or Password does not match');
       case 401:
-      //TokenHandler.refreshToken();
+        //TokenHandler.refreshToken();
         Map<dynamic, dynamic> responseJson = json.decode(response.body);
         dynamic data = responseJson['message'];
         throw UnauthorisedException(data.join('\n'));
@@ -73,8 +73,7 @@ class HttpHelper {
         Map<dynamic, dynamic> responseJson = json.decode(response.body);
         var data = responseJson['message'];
         log("error: " + data.toString());
-        throw FetchDataException(
-            'Server side error. Please contact with your support team');
+        throw FetchDataException(data.toString());
     }
   }
 }
